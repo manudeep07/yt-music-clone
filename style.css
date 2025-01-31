@@ -59,7 +59,7 @@ nav ul li.brand img {
 /* Songs List */
 .songslist {
     background-color: white;
-    height: 60px;
+    height: 50px;
     border: 1px solid #ddd;
     border-radius: 15px;
     display: flex;
@@ -282,3 +282,121 @@ nav ul li.brand img {
 .iconsp {
     cursor: pointer;
 }
+/* Responsive Design */
+
+/* For small screens like mobile devices */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .songslist {
+        width: 95%;
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .songslist img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .bottom {
+        padding: 15px;
+    }
+
+    #progressbar {
+        width: 70%;
+    }
+
+    #currentTime {
+        left: 20%;
+    }
+
+    #duration {
+        right: 20%;
+    }
+
+    .icons i {
+        font-size: 22px;
+    }
+}
+
+/* For tablets and medium screens */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .container {
+        width: 70%;
+    }
+
+    .songslist {
+        width: 85%;
+        padding: 10px 20px;
+    }
+
+    .songslist img {
+        height: 55px;
+        width: 55px;
+    }
+
+    .bottom {
+        padding: 18px;
+    }
+
+    #progressbar {
+        width: 50%;
+    }
+
+    #currentTime {
+        left: 25%;
+    }
+
+    #duration {
+        right: 25%;
+    }
+
+    .icons i {
+        font-size: 24px;
+    }
+}
+
+/* For large screens and desktops */
+@media (min-width: 1025px) {
+    .container {
+        width: 50%;
+    }
+
+    .songslist {
+        width: 80%;
+    }
+
+    .bottom {
+        padding: 20px 30px;
+    }
+
+    #progressbar {
+        width: 40%;
+    }
+
+    #currentTime {
+        left: 30%;
+    }
+
+    #duration {
+        right: 30%;
+    }
+
+    .icons i {
+        font-size: 28px;
+    }
+}
+
