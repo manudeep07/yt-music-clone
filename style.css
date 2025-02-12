@@ -6,6 +6,7 @@ body {
     background-color: #f9f9f9;
     background-image: url('bb.jpg.jpg');
     background-size: cover;
+    background-repeat: no-repeat;
     color: #333;
 }
 
@@ -99,6 +100,7 @@ nav ul li.brand img {
     margin-left: 15px;
     font-size: 18px;
     color: black;
+    width: 30px;
 }
 
 .songicon {
@@ -110,6 +112,7 @@ nav ul li.brand img {
 
 .timespan {
     color: whitesmoke;
+
 }
 
 /* Bottom Controls */
@@ -136,12 +139,15 @@ nav ul li.brand img {
     font-weight: bold;
     color: white;
     width: 50%;
+    bottom: 0;
+    left: 0;
     text-align: left;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     padding-left: 15px;
 }
+
 
 /* Progress Bar Container (Centered) */
 .progress-container {
@@ -247,6 +253,7 @@ nav ul li.brand img {
     border-radius: 15px;
     background-color: #333;
     color: white;
+
     transition: background-color 0.3s ease, transform 0.2s ease;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -282,121 +289,42 @@ nav ul li.brand img {
 .iconsp {
     cursor: pointer;
 }
-/* Responsive Design */
 
-/* For small screens like mobile devices */
-@media (max-width: 600px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
+@media (max-width: 800px) {
+    .timespan {
+        display: none;
     }
-
-    nav ul li {
-        margin: 5px 0;
-    }
-
-    .container {
-        width: 90%;
-        padding: 10px;
-    }
-
     .songslist {
-        width: 95%;
-        padding: 8px 15px;
-        font-size: 14px;
+        width: 100%; /* Ensure it spans full width */
+        height: auto; /* Adapt height dynamically */
     }
+    .bottom {
+        height: 80px;
+    }
+    body {
+        background-color: black;
+    }
+}
 
-    .songslist img {
+@media (max-width: 400px) {
+    #songName {
+        display: none;
+    }
+    .songslist {
         height: 50px;
-        width: 50px;
     }
-
-    .bottom {
-        padding: 15px;
-    }
-
-    #progressbar {
-        width: 70%;
-    }
-
-    #currentTime {
-        left: 20%;
-    }
-
-    #duration {
-        right: 20%;
-    }
-
-    .icons i {
-        font-size: 22px;
-    }
-}
-
-/* For tablets and medium screens */
-@media (min-width: 601px) and (max-width: 1024px) {
-    .container {
-        width: 70%;
-    }
-
-    .songslist {
-        width: 85%;
-        padding: 10px 20px;
-    }
-
     .songslist img {
-        height: 55px;
-        width: 55px;
+        height: 25px;
+        width: 25px;
     }
-
     .bottom {
-        padding: 18px;
+        height: 40px;
+        border-radius: 0;
     }
-
-    #progressbar {
-        width: 50%;
-    }
-
     #currentTime {
-        left: 25%;
+        left: 75px;
     }
-
     #duration {
-        right: 25%;
-    }
-
-    .icons i {
-        font-size: 24px;
+        right: 90px;
     }
 }
-
-/* For large screens and desktops */
-@media (min-width: 1025px) {
-    .container {
-        width: 50%;
-    }
-
-    .songslist {
-        width: 80%;
-    }
-
-    .bottom {
-        padding: 20px 30px;
-    }
-
-    #progressbar {
-        width: 40%;
-    }
-
-    #currentTime {
-        left: 30%;
-    }
-
-    #duration {
-        right: 30%;
-    }
-
-    .icons i {
-        font-size: 28px;
-    }
-}
-
